@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <header>
+        <h1>Welcome, <span id="facultyName"></span></h1>
+        <link rel="stylesheet" href="style.css">
+    </header>
+    <main>
+        <h2>Your Assigned Tasks</h2>
+        <ul id="taskList"></ul>
+
+        <div id="acceptedTaskSection">
+            <h3>Assigned Tasks</h3>
+            <ul id="acceptedTaskList"></ul>
+        </div>
+
+        <div id="deniedTaskSection">
+            <h3>Denied Tasks & Feedback</h3>
+            <ul id="deniedTaskList"></ul>
+        </div>
+
+        <button onclick="logout()">Logout</button>
+    </main>
+    <script src="Faculty.js"></script>
+
+</body>
+</html>

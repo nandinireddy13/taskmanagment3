@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dean's Task Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>DEAN'S TASK MANAGEMENT DASHBOARD</h1>
+    </header>
+
+    <main>
+        <div id="assignTaskSection">
+            <h3>Assign Task</h3>
+            <input type="text" id="taskDesc" placeholder="Enter Task Description">
+            <select id="teacherList" multiple></select>
+            <button onclick="assignTask()">Assign Task</button>
+        </div>
+
+        <div id="acceptedTaskSection">
+            <h3>Accepted Tasks</h3>
+            <ul id="acceptedTaskList"></ul>
+        </div>
+
+        <div id="waitingTaskSection">
+            <h3>Pending Tasks</h3>
+            <ul id="waitingTaskList"></ul>
+        </div>
+
+        <div id="deniedTaskSection">
+            <h3>Denied Tasks</h3>
+            <ul id="deniedTaskList"></ul>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="Dean.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#teacherList').select2({
+                placeholder: "Select Teachers",
+                allowClear: true
+            });
+        });
+    </script>
+</body>
+</html>
